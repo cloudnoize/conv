@@ -2,6 +2,10 @@ package conv
 
 import "math"
 
+//Littile Endian
+//Convert float to bit representaion
+//take less significant byte and fill it with lowest address.
+//bit shift pattern eight places to the right and fill the next byte and so on.
 func Float32ToBytes(fl float32, b []byte, j int) {
 	f := math.Float32bits(fl)
 	b[j] = byte(f)
